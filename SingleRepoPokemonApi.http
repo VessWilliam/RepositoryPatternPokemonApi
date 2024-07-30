@@ -1,0 +1,6 @@
+@SingleRepoPokemonApi_HostAddress = http://localhost:5190
+
+GET {{SingleRepoPokemonApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
