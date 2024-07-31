@@ -1,1 +1,1 @@
-Single Repositories Solid Principle letter (S) 🧸🧸
+Repository Pattern C# minimal API 🧸🧸
