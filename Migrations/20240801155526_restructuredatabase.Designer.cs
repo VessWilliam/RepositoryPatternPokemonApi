@@ -11,8 +11,8 @@ using SingleRepoPokemonApi.Data;
 namespace SingleRepoPokemonApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240729085724_pokemonsnapshort")]
-    partial class pokemonsnapshort
+    [Migration("20240801155526_restructuredatabase")]
+    partial class restructuredatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,16 +67,16 @@ namespace SingleRepoPokemonApi.Migrations
 
             modelBuilder.Entity("SingleRepoPokemonApi.Model.Entity.PokemonAttribute", b =>
                 {
-                    b.HasOne("SingleRepoPokemonApi.Model.Entity.Pokemon", "pokemon")
-                        .WithMany("pokemonAttribute")
+                    b.HasOne("SingleRepoPokemonApi.Model.Entity.Pokemon", "Pokemon")
+                        .WithMany("PokemonAttributes")
                         .HasForeignKey("PokemonId");
 
-                    b.Navigation("pokemon");
+                    b.Navigation("Pokemon");
                 });
 
             modelBuilder.Entity("SingleRepoPokemonApi.Model.Entity.Pokemon", b =>
                 {
-                    b.Navigation("pokemonAttribute");
+                    b.Navigation("PokemonAttributes");
                 });
 #pragma warning restore 612, 618
         }

@@ -7,5 +7,5 @@ public interface IPokemonService
     Task<PokemonDTO?> AddPokemonAsync(PokemonDTO pokemon);
     Task<bool> DeletePokemonAsync(string id);
     Task<List<PokemonDTO>?> GetAllPokemonAsync();
-    Task<PokemonDTO?> UpdatePokemonAsync(PokemonDTO pokemon);
+    Task<PokemonDTO?> UpdatePokemonAsync(string id, PokemonDTO pokemon);
 }

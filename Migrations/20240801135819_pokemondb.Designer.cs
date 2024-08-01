@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SingleRepoPokemonApi.Data;
 
@@ -10,9 +11,11 @@ using SingleRepoPokemonApi.Data;
 namespace SingleRepoPokemonApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240801135819_pokemondb")]
+    partial class pokemondb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,16 +67,16 @@ namespace SingleRepoPokemonApi.Migrations
 
             modelBuilder.Entity("SingleRepoPokemonApi.Model.Entity.PokemonAttribute", b =>
                 {
-                    b.HasOne("SingleRepoPokemonApi.Model.Entity.Pokemon", "Pokemon")
-                        .WithMany("PokemonAttributes")
+                    b.HasOne("SingleRepoPokemonApi.Model.Entity.Pokemon", "pokemon")
+                        .WithMany("pokemonAttribute")
                         .HasForeignKey("PokemonId");
 
-                    b.Navigation("Pokemon");
+                    b.Navigation("pokemon");
                 });
 
             modelBuilder.Entity("SingleRepoPokemonApi.Model.Entity.Pokemon", b =>
                 {
-                    b.Navigation("PokemonAttributes");
+                    b.Navigation("pokemonAttribute");
                 });
 #pragma warning restore 612, 618
         }

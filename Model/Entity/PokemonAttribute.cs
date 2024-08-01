@@ -15,5 +15,5 @@ public class PokemonAttribute
 
     [ForeignKey(nameof(Pokemon))]
     public string? PokemonId { get; set; }
-    public Pokemon? pokemon { get; set; }
+    public Pokemon? Pokemon { get; set; }
 }

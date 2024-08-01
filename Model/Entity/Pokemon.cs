@@ -10,5 +10,5 @@ public class Pokemon
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public string? Id { get; set; }
     public string? Name { get; set; }
-    public ICollection<PokemonAttribute>? pokemonAttribute { get; set; }
+    public ICollection<PokemonAttribute>? PokemonAttributes { get; set; }
 }

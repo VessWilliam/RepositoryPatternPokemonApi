@@ -5,7 +5,7 @@
 namespace SingleRepoPokemonApi.Migrations
 {
     /// <inheritdoc />
-    public partial class pokemonsnapshort : Migration
+    public partial class pokemondb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

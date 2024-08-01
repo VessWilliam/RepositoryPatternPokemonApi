@@ -5,9 +5,6 @@ namespace SingleRepoPokemonApi.Model.DTO;
 
 public class PokemonAttributeDTO
 {
-    [JsonIgnore]
-    public int id { get; set; }
-
     [DefaultValue("")]
     public int Attack { get; set; }
 
@@ -16,7 +13,4 @@ public class PokemonAttributeDTO
 
     [DefaultValue("")]
     public string? Type { get; set; }
-
-    [JsonIgnore]
-    public string? PokemonId { get; set; }
 }
